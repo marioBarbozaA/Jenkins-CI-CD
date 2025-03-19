@@ -11,6 +11,12 @@ pipeline {
                 bat  'pip install -r requirements.txt'
             }
         }
+        stage('Verificar Python') {
+            steps {
+                bat 'where python'
+                bat 'python --version'
+            }
+        }
         stage('Entrenar Modelo') {
             steps {
                 bat  'python main.py train'
