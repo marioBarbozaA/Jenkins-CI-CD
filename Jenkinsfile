@@ -1,5 +1,8 @@
 pipeline {
     agent any  // Usa cualquier máquina disponible en Jenkins
+    tools {
+        python 'MiPython3.9' 
+    }
     stages {
         stage('Clonar Repositorio') {
             steps {
