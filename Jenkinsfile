@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Verificar Python') {
             steps {
-                bat 'where python'
                 bat 'python --version'
             }
         }
